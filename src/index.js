@@ -1,3 +1,6 @@
+// Making sure the DOM loads first before displaying the movies
+document.addEventListener('DOMContentLoaded', fetchMovieData)
+
 // Define the API endpoint for movie data
 const apiEndpoint = 'http://localhost:3000/films';
 
@@ -38,3 +41,39 @@ function displayMovieDetailsAndList(movieData) {
         displayMovieDetails(movieData[0]);
     }
 }
+
+// Function to display movie details
+function displayMovieDetails(movie) {
+    const movieDetails = document.getElementById('movie-details');
+    movieDetails.innerHTML = `
+        <img src="${movie.poster}" alt="${movie.title}">
+        <h2>${movie.title}</h2>
+        <p>Runtime: ${movie.runtime} mins</p>
+        <p>Showtime: ${movie.showtime}</p>
+        <p>Available Tickets: ${movie.capacity - movie.tickets_sold}</p>
+        <button id="buy-ticket">Buy Ticket</button>
+    `
+
+    // Add a click event listener for the "Buy Ticket" button
+    const buyTicketButton = document.getElementById('buy-ticket');
+    buyTicketButton.addEventListener('click', () => {
+        if (movie.capacity > movie.tickets_sold) {
+            movie.tickets_sold++;
+            displayMovieDetails(movie);
+        } else {
+            alert('Sorry, this showing is sold out.');
+        }
+    })
+}
+
+// trying to use the load event listener it did take a while but i did work
+window.addEventListener('load', async () => {
+    const movieData = await fetchMovieData();
+
+    if (movieData.length > 0) {
+        displayMovieDetailsAndList(movieData);
+    } else {
+        alert('Error loading movie data. Please try again later.');
+    }
+})
+
