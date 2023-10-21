@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', fetchMovieData)
 
 // Define the API endpoint for movie data
-const apiEndpoint = 'http://localhost:3000/films';
+const apiEndpoint = 'https://my-json-server.typicode.com/martinwakaba/code-challenge-3/films';
 
 // Function to fetch movie data
 async function fetchMovieData() {
