@@ -64,8 +64,8 @@ function displayMovieDetails(movie) {
         } else {
            let btn =  document.querySelector("#buy-ticket");
            btn.textContent = 'Sold Out';
-           
-            
+           alert('Sorry, This Movie is Sold Out')
+
         }
     })
 }
