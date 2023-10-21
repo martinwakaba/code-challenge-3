@@ -1,5 +1,8 @@
 # FLATDANGO MOVIES Web App
 
+**Author**
+Martin Wakaba
+
 ## Overview
 
 FLATDANGO MOVIES is a web application that displays a list of movies and their details. It ensures that the DOM (Document Object Model) is fully loaded before displaying the movie data. Users can click on a movie in the list to view its details, and if tickets are available, they can buy them.
@@ -8,7 +11,7 @@ FLATDANGO MOVIES is a web application that displays a list of movies and their d
 
 Before you begin using the FLATDANGO MOVIES web app, ensure that you have set up the required environment and dependencies.
 
-1. Clone or download the project from the [FLATDANGO MOVIES repository](https://github.com/your-repo-url).
+1. Clone or download the project from github.
 
 2. Open the project folder in your preferred code editor.
 

@@ -61,12 +61,12 @@ function displayMovieDetails(movie) {
             movie.tickets_sold++;
             displayMovieDetails(movie);
         } else {
-            alert('Sorry, this showing is sold out.');
+            alert('Sorry, this Movie is sold out.');
         }
     })
 }
 
-// trying to use the load event listener it did take a while but i did work
+// trying to use the load event listener it did take a while to navigate through it but it did work
 window.addEventListener('load', async () => {
     const movieData = await fetchMovieData();
 
