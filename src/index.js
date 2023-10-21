@@ -38,7 +38,8 @@ function displayMovieDetailsAndList(movieData) {
 
     // Display details of the first movie by default
     if (movieData.length > 0) {
-        displayMovieDetails(movieData[0]);
+        let rand = Math.floor(Math.random() * movieData.length)
+        displayMovieDetails(movieData[rand]);
     }
 }
 
