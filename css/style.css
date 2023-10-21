@@ -93,9 +93,9 @@ button#buy-ticket {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 button#buy-ticket:hover {
-    background-color: #1f2046;
+    background-color: #43dcf4;
 }
