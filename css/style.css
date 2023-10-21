@@ -68,11 +68,11 @@ li.film.item {
     border: 1px solid #a8d6d6;
     margin-bottom: 5px;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #f4a347;
 }
 
 li.film.item:hover {
-    background-color: #9fa5a1;
+    background-color: #94f0b3;
 }
 
 img {
@@ -81,9 +81,11 @@ img {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 35px;
 }
-
+p{
+    font-size: 22px;
+}
 button#buy-ticket {
     border: 1px solid #000000;
     background-color: var(--light-four);
@@ -91,6 +93,7 @@ button#buy-ticket {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 button#buy-ticket:hover {
