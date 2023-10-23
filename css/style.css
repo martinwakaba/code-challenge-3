@@ -13,21 +13,28 @@
 
 body,
 button{
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif, Arial, Helvetica;
 }
 /* the header part was good to play with */
 header {
     background-color: var(--dark-one);
     padding: 10px 0;
 }
+a{
+    text-decoration: none;
+}
+h1:hover{
+    color: #fb2436;
+    cursor: pointer;
+}
 
 h1{
     font-size: 40px;
     text-align: center; /* Center the text horizontally */
-  margin: 0; 
-  background:linear-gradient(135deg, #72cae8, #f3dd4fb9);
-  color: #fff; 
-  padding: 10px;
+    margin: 0; 
+    background:linear-gradient(135deg, #72cae8, #f3dd4fb9);
+    color: #000; 
+    padding: 8px;
 }
 
 body {
@@ -42,15 +49,15 @@ main {
 }
 
 #movie-list {
-    width: 30%;
+    width: 43%;
     background: linear-gradient(60deg, #72cae8, #f3dd4fb9) ;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.637);
     border-radius: 10px;
 }
 
 #movie-details {
-    width: 68%;
+    width: 55%;
     background: linear-gradient(30deg, #72cae8, #f3dd4fb9, #dd8b8b) ;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.658);
@@ -65,7 +72,7 @@ ul#films {
 li.film.item {
     padding: 10px;
     cursor: pointer;
-    border: 1px solid #a8d6d6;
+    border: 1px solid #000000;
     margin-bottom: 5px;
     border-radius: 5px;
     background-color: #f4a347;
@@ -73,6 +80,9 @@ li.film.item {
 
 li.film.item:hover {
     background-color: #94f0b3;
+}
+li.film.item:active{
+    background-color: #fb2436;
 }
 
 img {
