@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', fetchMovieData)
 
 // Define the API endpoint for movie data
-const apiEndpoint = 'http://localhost:3000/films';
+const apiEndpoint = 'https://my-json-server.typicode.com/martinwakaba/code-challenge-3/films';
 
 // Function to fetch movie data
 async function fetchMovieData() {
@@ -60,12 +60,13 @@ function displayMovieDetails(movie) {
     buyTicketButton.addEventListener('click', () => {
         if (movie.capacity > movie.tickets_sold) {
             movie.tickets_sold++;
+            alert('You bought a ticket')
             displayMovieDetails(movie);
         } else {
            let btn =  document.querySelector("#buy-ticket");
            btn.textContent = 'Sold Out';
-           
-            
+           alert('Sorry, This Movie is Sold Out')
+
         }
     })
 }
@@ -80,4 +81,3 @@ window.addEventListener('load', async () => {
         alert('Error loading movie data. Please try again later.');
     }
 })
-
