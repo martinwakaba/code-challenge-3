@@ -60,6 +60,7 @@ function displayMovieDetails(movie) {
     buyTicketButton.addEventListener('click', () => {
         if (movie.capacity > movie.tickets_sold) {
             movie.tickets_sold++;
+            alert('You bought a ticket')
             displayMovieDetails(movie);
         } else {
            let btn =  document.querySelector("#buy-ticket");
